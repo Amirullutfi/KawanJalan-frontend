@@ -109,7 +109,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(true)}
           style={{
             background: 'none',
             border: 'none',
@@ -118,50 +118,77 @@ const Navbar = () => {
           }}
           className="mobile-toggle"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={24} />
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Backdrop */}
       {isOpen && (
-        <div className="glass animate-fade-in" style={{
-          position: 'absolute',
-          top: '100%',
-          left: 0,
-          width: '100%',
-          padding: '20px 24px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '16px',
-          borderBottom: '1px solid rgba(255,255,255,0.2)',
-          boxShadow: 'var(--shadow-md)',
-          zIndex: 99
-        }}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              style={{
-                fontWeight: 600,
-                color: isActive(link.path) ? 'var(--primary)' : 'var(--text-dark)',
-                padding: '8px 0'
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
-          {admin && (
-            <>
-              <hr style={{ border: 'none', borderTop: '1px solid #cbd5e1' }} />
-              <Link to="/admin" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%' }}>
-                <LayoutDashboard size={18} />
-                Dashboard Admin
-              </Link>
-            </>
-          )}
-        </div>
+        <div 
+          onClick={() => setIsOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 998,
+            backdropFilter: 'blur(2px)'
+          }}
+        />
       )}
+
+      {/* Mobile Menu Drawer */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        right: isOpen ? 0 : '-100%',
+        width: '80%',
+        maxWidth: '300px',
+        height: '100vh',
+        backgroundColor: '#ffffff',
+        zIndex: 999,
+        transition: 'right 0.3s ease-in-out',
+        boxShadow: '-5px 0 15px rgba(0,0,0,0.1)',
+        padding: '24px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '8px',
+        overflowY: 'auto'
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+          <span style={{ fontWeight: 800, fontSize: '1.2rem', color: 'var(--primary)' }}>Menu</span>
+          <button onClick={() => setIsOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-dark)' }}>
+            <X size={24} />
+          </button>
+        </div>
+        
+        {navLinks.map((link) => (
+          <Link
+            key={link.path}
+            to={link.path}
+            onClick={() => setIsOpen(false)}
+            style={{
+              fontWeight: 600,
+              color: isActive(link.path) ? 'var(--primary)' : 'var(--text-dark)',
+              padding: '12px 0',
+              borderBottom: '1px solid #f1f5f9',
+              display: 'block'
+            }}
+          >
+            {link.label}
+          </Link>
+        ))}
+        {admin && (
+          <div style={{ marginTop: 'auto', paddingTop: '24px' }}>
+            <Link to="/admin" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '8px' }}>
+              <LayoutDashboard size={18} />
+              Dashboard Admin
+            </Link>
+          </div>
+        )}
+      </div>
 
       {/* Embedded Mobile CSS Toggle Helper */}
       <style>{`
