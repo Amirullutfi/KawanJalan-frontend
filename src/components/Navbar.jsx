@@ -24,13 +24,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="glass" style={{
+    <nav style={{
       position: 'sticky',
       top: 0,
       zIndex: 100,
       padding: '16px 0',
       transition: 'var(--transition)',
-      borderBottom: '1px solid rgba(255,255,255,0.2)',
+      backgroundColor: '#ffffff',
+      borderBottom: '1px solid #e2e8f0',
       boxShadow: 'var(--shadow-sm)'
     }}>
       <div className="container" style={{
