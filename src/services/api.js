@@ -1,55 +1,177 @@
-import axios from 'axios';
+import { 
+  fallbackDestinations, 
+  fallbackPackages, 
+  fallbackEvents, 
+  fallbackCategories,
+  fallbackTestimonials,
+  fallbackArticles
+} from '../data/fallbackData';
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api',
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-  },
-});
+// Simulated DB Helpers using localStorage
+const getLocalDB = (key, defaultData = []) => {
+  const data = localStorage.getItem(key);
+  return data ? JSON.parse(data) : defaultData;
+};
+const saveLocalDB = (key, data) => localStorage.setItem(key, JSON.stringify(data));
 
-// Interceptor to inject Sanctum token in Authorization header
-api.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem('admin_token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+const mockDelay = (ms = 500) => new Promise(resolve => setTimeout(resolve, ms));
+
+const mockApi = {
+  get: async (url, config = {}) => {
+    await mockDelay();
+    console.log(`[Mock API GET] ${url}`);
+    
+    // Check local storage first for dynamic data
+    if (url.includes('/bookings')) {
+      const bookings = getLocalDB('mock_bookings', []);
+      if (url === '/admin/bookings') return { data: bookings };
+      // match /bookings/123
+      const idMatch = url.match(/\/bookings\/(\w+)/);
+      if (idMatch) {
+         const booking = bookings.find(b => b.id == idMatch[1] || b.booking_code === idMatch[1]);
+         return { data: booking };
+      }
+      return { data: bookings };
     }
-    return config;
+    
+    if (url.includes('/events')) {
+      const idMatch = url.match(/\/events\/(\d+)/);
+      if (idMatch) {
+         return { data: fallbackEvents.find(e => e.id == idMatch[1]) };
+      }
+      return { data: fallbackEvents || [] };
+    }
+    
+    if (url.includes('/packages')) {
+      const idMatch = url.match(/\/packages\/(\d+)/);
+      if (idMatch) {
+         return { data: fallbackPackages.find(p => p.id == idMatch[1]) };
+      }
+      return { data: fallbackPackages };
+    }
+    
+    if (url.includes('/destinations')) {
+      const idMatch = url.match(/\/destinations\/(\d+)/);
+      if (idMatch) {
+         return { data: fallbackDestinations.find(d => d.id == idMatch[1]) };
+      }
+      return { data: fallbackDestinations };
+    }
+    
+    if (url.includes('/categories')) return { data: fallbackCategories };
+    if (url.includes('/testimonials')) return { data: fallbackTestimonials };
+    if (url.includes('/articles')) return { data: fallbackArticles || [] };
+    
+    if (url.includes('/admin/subscribers')) return { data: getLocalDB('mock_subscribers', []) };
+    if (url.includes('/admin/registrations')) return { data: getLocalDB('mock_registrations', []) };
+    
+    if (url.includes('/admin/dashboard')) {
+       const bookings = getLocalDB('mock_bookings', []);
+       return { data: {
+           total_destinations: fallbackDestinations.length,
+           total_bookings: bookings.length,
+           total_subscribers: getLocalDB('mock_subscribers', []).length,
+           total_events: (fallbackEvents || []).length
+       }};
+    }
+    
+    return { data: [] };
   },
-  (error) => {
-    return Promise.reject(error);
+  
+  post: async (url, data, config = {}) => {
+    await mockDelay();
+    console.log(`[Mock API POST] ${url}`, data);
+    
+    if (url === '/admin/login') {
+       if (data.email === 'admin@explora.id' && data.password === 'password123') {
+           localStorage.setItem('admin_token', 'mock_token_123');
+           return { data: { token: 'mock_token_123', user: { name: 'Admin', role: 'admin' } } };
+       }
+       throw new Error('Invalid credentials');
+    }
+    
+    if (url === '/bookings') {
+       const bookings = getLocalDB('mock_bookings', []);
+       const newBooking = {
+           id: Date.now(),
+           booking_code: 'BK' + Date.now().toString().slice(-6),
+           ...data,
+           payment_status: 'waiting_payment',
+           created_at: new Date().toISOString()
+       };
+       bookings.push(newBooking);
+       saveLocalDB('mock_bookings', bookings);
+       return { data: { booking: newBooking, message: 'Booking successful' } };
+    }
+    
+    if (url.includes('/register')) {
+       const regs = getLocalDB('mock_registrations', []);
+       regs.push({ id: Date.now(), ...data, created_at: new Date().toISOString() });
+       saveLocalDB('mock_registrations', regs);
+       return { data: { message: 'Registration successful' } };
+    }
+    
+    if (url === '/subscribe') {
+       const subs = getLocalDB('mock_subscribers', []);
+       subs.push({ id: Date.now(), ...data, subscribed_at: new Date().toISOString() });
+       saveLocalDB('mock_subscribers', subs);
+       return { data: { message: 'Subscribed' } };
+    }
+    
+    return { data: { success: true } };
+  },
+  
+  put: async (url, data, config = {}) => {
+    await mockDelay();
+    console.log(`[Mock API PUT] ${url}`, data);
+    if (url.includes('/admin/bookings/')) {
+       const idMatch = url.match(/\/admin\/bookings\/(\d+)/);
+       if (idMatch) {
+           let bookings = getLocalDB('mock_bookings', []);
+           bookings = bookings.map(b => b.id == idMatch[1] ? { ...b, ...data } : b);
+           saveLocalDB('mock_bookings', bookings);
+           return { data: { message: 'Status updated' } };
+       }
+    }
+    return { data: { success: true } };
+  },
+  
+  delete: async (url, config = {}) => {
+    await mockDelay();
+    console.log(`[Mock API DELETE] ${url}`);
+    if (url.includes('/admin/bookings/')) {
+       const idMatch = url.match(/\/admin\/bookings\/(\d+)/);
+       if (idMatch) {
+           let bookings = getLocalDB('mock_bookings', []);
+           bookings = bookings.filter(b => b.id != idMatch[1]);
+           saveLocalDB('mock_bookings', bookings);
+           return { data: { message: 'Deleted' } };
+       }
+    }
+    return { data: { success: true } };
+  },
+  
+  interceptors: {
+    request: { use: () => {} },
+    response: { use: () => {} }
   }
-);
+};
 
-// Optional helper for image source URLs
 export const getMediaUrl = (path) => {
-  if (!path) return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800'; // fallback
+  if (!path) return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800';
   if (path.startsWith('http')) return path;
   
-  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://127.0.0.1:8000';
-  return `${serverUrl}/${path}`;
+  // Return dummy unsplash if path is just a filename
+  return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800'; 
 };
 
-// Caching helper to automatically store backend data and fall back on failure
 export const fetchWithCache = async (url, fallbackData = null) => {
-  const cacheKey = `cached_${url.replace(/[^a-zA-Z0-9]/g, '_')}`;
   try {
-    const response = await api.get(url);
-    localStorage.setItem(cacheKey, JSON.stringify(response.data));
-    return response.data;
-  } catch (error) {
-    console.warn(`API error on ${url}. Using local storage fallback.`, error);
-    const cached = localStorage.getItem(cacheKey);
-    if (cached) {
-      try {
-        return JSON.parse(cached);
-      } catch (parseErr) {
-        console.error(`Error parsing cached data for ${cacheKey}:`, parseErr);
-      }
-    }
-    return fallbackData;
+     const response = await mockApi.get(url);
+     return response.data || fallbackData;
+  } catch (err) {
+     return fallbackData;
   }
 };
 
-export default api;
+export default mockApi;
