@@ -93,16 +93,36 @@ const mockApi = {
     
     if (url === '/bookings') {
        const bookings = getLocalDB('mock_bookings', []);
+       const packageData = fallbackPackages.find(p => p.id == data.package_id);
+       let basePrice = packageData ? (packageData.price_unit === 'orang' ? packageData.price * data.num_people : packageData.price) : 0;
+       
+       let photoPrice = 0;
+       if (data.photo_package_name) {
+         const photoPrices = { 'MINI': 400000, 'SHORT': 450000, 'MEDIUM': 500000, 'LONG': 600000, 'SUKA SUKA': 800000 };
+         photoPrice = photoPrices[data.photo_package_name] || 0;
+       }
+       
+       let dronePrice = data.addon_drone ? 500000 : 0;
+       let totalPrice = basePrice + photoPrice + dronePrice;
+       let dpAmount = totalPrice * 0.3;
+       let uniqueCode = Math.floor(Math.random() * 900) + 100;
+
        const newBooking = {
            id: Date.now(),
            booking_code: 'BK' + Date.now().toString().slice(-6),
            ...data,
+           package: packageData,
+           photo_package_price: photoPrice,
+           addon_drone_price: dronePrice,
+           total_price: totalPrice,
+           dp_amount: dpAmount,
+           unique_code: uniqueCode,
            payment_status: 'waiting_payment',
            created_at: new Date().toISOString()
        };
        bookings.push(newBooking);
        saveLocalDB('mock_bookings', bookings);
-       return { data: { booking: newBooking, message: 'Booking successful' } };
+       return { data: { booking: newBooking, booking_id: newBooking.booking_code, message: 'Booking successful' } };
     }
     
     if (url.includes('/register')) {
