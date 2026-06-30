@@ -80,7 +80,7 @@ const Payment = () => {
   // Generate WA chat confirmation link
   const getWhatsAppConfirmLink = () => {
     if (!booking) return '#';
-    const adminPhone = '6281234567890'; // fallback admin phone
+    const adminPhone = '6281913052180'; // fallback admin phone
     const totalTransfer = parseFloat(booking.dp_amount) + parseInt(booking.unique_code || 0);
     const formattedTotal = numberFormat(totalTransfer);
     const formattedRemaining = numberFormat(parseFloat(booking.total_price) - parseFloat(booking.dp_amount));
@@ -93,7 +93,7 @@ const Payment = () => {
       docInfo += ` + Drone`;
     }
 
-    const text = `Halo Admin KawanJalan Tour & Travel,\n\nSaya ingin melakukan konfirmasi pembayaran DP 30%:\n- Kode Booking: ${booking.booking_code || '#EXP-' + booking.id}\n- Nama Pemesan: ${booking.customer_name}\n- Paket Wisata: ${booking.package?.title}${docInfo}\n- Nominal Transfer DP + Kode Unik: Rp ${formattedTotal}\n- Sisa Pelunasan di Lokasi: Rp ${formattedRemaining}\n\nSaya telah mentransfer dana DP ke rekening BCA. Berikut saya sertakan bukti transfernya.`;
+    const text = `Halo Admin KawanJalan Tour & Travel,\n\nSaya ingin melakukan konfirmasi pembayaran DP 30%:\n- Kode Booking: ${booking.booking_code || '#EXP-' + booking.id}\n- Nama Pemesan: ${booking.customer_name}\n- Paket Wisata: ${booking.package?.title}${docInfo}\n- Nominal Transfer DP + Kode Unik: Rp ${formattedTotal}\n- Sisa Pelunasan di Lokasi: Rp ${formattedRemaining}\n\nSaya telah mentransfer dana DP ke Bank Mandiri. Berikut saya sertakan bukti transfernya.`;
     return `https://wa.me/${adminPhone}?text=${encodeURIComponent(text)}`;
   };
 
@@ -281,9 +281,9 @@ const Payment = () => {
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '1px', marginBottom: '4px' }}>
                   Transfer Ke Rekening:
                 </p>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--dark)' }}>123-456-7890</h3>
-                <p style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--dark-soft)' }}>Bank Central Asia (BCA)</p>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>a.n. Kawan Jalan Indonesia</p>
+                <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--dark)' }}>1370024593770</h3>
+                <p style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--dark-soft)' }}>Bank Mandiri</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>a.n. Andriyana</p>
               </div>
 
               {/* CTA Buttons */}

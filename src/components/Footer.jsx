@@ -82,11 +82,15 @@ const Footer = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: '#94a3b8' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <MapPin size={18} style={{ color: 'var(--primary)' }} />
-                <span>Kuta, Badung, Bali, Indonesia</span>
+                <span>
+                  Dusun Tanen, Rt 01 / Rw 25<br />
+                  Kel. Hargobinangun, Kec. Pakem<br />
+                  Sleman, DIY
+                </span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Phone size={18} style={{ color: 'var(--primary)' }} />
-                <span>+62 812-3456-7890</span>
+                <span>+62 819-1305-2180</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Mail size={18} style={{ color: 'var(--primary)' }} />
