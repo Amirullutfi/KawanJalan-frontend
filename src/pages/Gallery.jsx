@@ -3,66 +3,56 @@ import { Sparkles, Camera, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GALLERY_ITEMS = [
-  {
-    id: 'g1',
-    spotName: 'Manuver air',
-    imageUrl: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800',
-    altText: 'Aksi Jeep offroad melintasi air Kali Kuning Merapi dengan cipratan air yang dramatis'
-  },
-  {
-    id: 'g2',
-    spotName: 'Museum mini',
-    imageUrl: 'https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?w=800',
-    altText: 'Museum Mini Sisa Hartaku mengoleksi barang-barang warga yang meleleh akibat awan panas Merapi'
-  },
-  {
-    id: 'g3',
-    spotName: 'Omahku memoriku',
-    imageUrl: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=800',
-    altText: 'Bangunan bersejarah saksi bisu erupsi Gunung Merapi dengan puing-puing peninggalan warga'
-  },
-  {
-    id: 'g4',
-    spotName: 'Batu alien',
-    imageUrl: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800',
-    altText: 'Batu vulkanik besar mirip wajah alien yang terlempar saat letusan Gunung Merapi'
-  },
-  {
-    id: 'g5',
-    spotName: 'Petilasan mbah maridjan',
-    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-    altText: 'Kawasan bersejarah bekas rumah juru kunci Gunung Merapi Mbah Maridjan di Dusun Kinahrejo'
-  },
-  {
-    id: 'g6',
-    spotName: 'Bungker Kaliadem',
-    imageUrl: 'https://images.unsplash.com/photo-1626082896492-766af4fc6595?w=800',
-    altText: 'Pemandangan gagah Gunung Merapi dari atas Bunker Kaliadem di pagi hari'
-  },
-  {
-    id: 'g7',
-    spotName: 'Stonehenge',
-    imageUrl: 'https://images.unsplash.com/photo-1508873696983-2df519f0397e?w=800',
-    altText: 'Replika Stonehenge di lereng Gunung Merapi dengan tumpukan batu megah berlatar pemandangan hijau'
-  },
-  {
-    id: 'g8',
-    spotName: 'The lost world park',
-    imageUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800',
-    altText: 'Kastil megah The Lost World Castle di lereng Merapi dengan awan kabut tipis yang estetik'
-  }
+  // Candi & Budaya
+  { id: 'c1', spotName: 'Candi & Budaya', imageUrl: '/images/Borobudur.jpg', altText: 'Kemegahan Candi Borobudur' },
+  { id: 'c2', spotName: 'Candi & Budaya', imageUrl: '/images/prambanan.jpg', altText: 'Keindahan Candi Prambanan' },
+  { id: 'c3', spotName: 'Candi & Budaya', imageUrl: '/images/tamansari.jpg', altText: 'Taman Sari Jogja' },
+  { id: 'c4', spotName: 'Candi & Budaya', imageUrl: '/images/benteng.jpg', altText: 'Benteng Bersejarah' },
+  { id: 'c5', spotName: 'Candi & Budaya', imageUrl: '/images/malioboro.jpg', altText: 'Kawasan Malioboro' },
+
+  // Wisata Alam & Pantai
+  { id: 'a1', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/Pantai-Ngobaran.jpg', altText: 'Pantai Ngobaran' },
+  { id: 'a2', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/pantai-balekambang.jpg', altText: 'Pantai Balekambang' },
+  { id: 'a3', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/pantai-sadranan.jpg', altText: 'Pantai Sadranan' },
+  { id: 'a4', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/pantai-timang.jpg', altText: 'Pantai Timang' },
+  { id: 'a5', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/pantaijungwok.png', altText: 'Pantai Jungwok' },
+  { id: 'a6', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/goa-pindul.jpg', altText: 'Goa Pindul' },
+  { id: 'a7', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/dieng.jpg', altText: 'Kawasan Dieng' },
+  { id: 'a8', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/mangunan.jpg', altText: 'Hutan Pinus Mangunan' },
+  { id: 'a9', spotName: 'Wisata Alam & Pantai', imageUrl: '/images/pulepayung.jpg', altText: 'Pule Payung' },
+
+  // Lava Tour Merapi
+  { id: 'm1', spotName: 'Lava Tour Merapi', imageUrl: '/images/Merapi.jpg', altText: 'Gunung Merapi' },
+  { id: 'm2', spotName: 'Lava Tour Merapi', imageUrl: '/images/bunker-kaliadem.jpg', altText: 'Bunker Kaliadem' },
+  { id: 'm3', spotName: 'Lava Tour Merapi', imageUrl: '/images/museum-merapi.jpg', altText: 'Museum Merapi' },
+  { id: 'm4', spotName: 'Lava Tour Merapi', imageUrl: '/images/jeep1.jpg', altText: 'Jeep Merapi 1' },
+  { id: 'm5', spotName: 'Lava Tour Merapi', imageUrl: '/images/jeep2.jpg', altText: 'Jeep Merapi 2' },
+  { id: 'm6', spotName: 'Lava Tour Merapi', imageUrl: '/images/jeep3.jpg', altText: 'Jeep Merapi 3' },
+
+  // Gunung Bromo
+  { id: 'b1', spotName: 'Gunung Bromo', imageUrl: '/images/Bromo.jpg', altText: 'Gunung Bromo' },
+  { id: 'b2', spotName: 'Gunung Bromo', imageUrl: '/images/pasir-berbisik.jpg', altText: 'Pasir Berbisik' },
+  { id: 'b3', spotName: 'Gunung Bromo', imageUrl: '/images/pura-poten.jpg', altText: 'Pura Poten Bromo' },
+  { id: 'b4', spotName: 'Gunung Bromo', imageUrl: '/images/savana-bromo.jpg', altText: 'Savana Bromo' },
+  { id: 'b5', spotName: 'Gunung Bromo', imageUrl: '/images/sunrise-bromo.jpg', altText: 'Sunrise di Bromo' },
+
+  // Spot Kekinian
+  { id: 'k1', spotName: 'Spot Kekinian', imageUrl: '/images/heha-sky.jpg', altText: 'Heha Sky View' },
+  { id: 'k2', spotName: 'Spot Kekinian', imageUrl: '/images/obelix-hills.jpg', altText: 'Obelix Hills' },
+
+  // Wisata Kuliner
+  { id: 'f1', spotName: 'Wisata Kuliner', imageUrl: '/images/bakso-malang.jpg', altText: 'Bakso Malang' },
+  { id: 'f2', spotName: 'Wisata Kuliner', imageUrl: '/images/jadah-tempe.jpg', altText: 'Jadah Tempe' }
 ];
 
 const SPOTS = [
   'Semua Spot',
-  'Manuver air',
-  'Museum mini',
-  'Omahku memoriku',
-  'Batu alien',
-  'Petilasan mbah maridjan',
-  'Bungker Kaliadem',
-  'Stonehenge',
-  'The lost world park'
+  'Candi & Budaya',
+  'Wisata Alam & Pantai',
+  'Lava Tour Merapi',
+  'Gunung Bromo',
+  'Spot Kekinian',
+  'Wisata Kuliner'
 ];
 
 const Gallery = () => {

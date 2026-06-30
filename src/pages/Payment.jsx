@@ -278,12 +278,21 @@ const Payment = () => {
                   ⚠️ Penting: Transfer nominal DP <strong>persis sampai 3 digit terakhir</strong> agar pembayaran Anda dapat diverifikasi dengan cepat oleh admin kami. Sisa pelunasan dibayarkan di lokasi trip kepada driver/guide.
                 </p>
 
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '1px', marginBottom: '4px' }}>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '1px', marginBottom: '12px' }}>
                   Transfer Ke Rekening:
                 </p>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--dark)' }}>1370024593770</h3>
-                <p style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--dark-soft)' }}>Bank Mandiri</p>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>a.n. Andriyana</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <img 
+                    src="https://www.google.com/s2/favicons?domain=bankmandiri.co.id&sz=128" 
+                    alt="Bank Mandiri" 
+                    style={{ width: '48px', height: '48px', objectFit: 'contain', borderRadius: '8px' }} 
+                  />
+                  <div>
+                    <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--dark)', margin: 0, lineHeight: 1 }}>1370024593770</h3>
+                    <p style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--dark-soft)', margin: '8px 0 2px' }}>Bank Mandiri</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>a.n. Andriyana</p>
+                  </div>
+                </div>
               </div>
 
               {/* CTA Buttons */}

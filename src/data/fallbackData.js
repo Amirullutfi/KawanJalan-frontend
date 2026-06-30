@@ -137,7 +137,7 @@ export const fallbackPackages = [
     price: 450000,
     price_unit: 'unit',
     duration: '1.5 Jam',
-    main_image: 'https://images.unsplash.com/photo-1626082896492-766af4fc6595?w=800'
+    main_image: '/images/jeep1.jpg'
   },
   {
     id: 2,
@@ -153,7 +153,7 @@ export const fallbackPackages = [
     price: 500000,
     price_unit: 'unit',
     duration: '1.5 Jam',
-    main_image: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800'
+    main_image: '/images/jeep2.jpg'
   },
   {
     id: 3,
@@ -169,7 +169,7 @@ export const fallbackPackages = [
     price: 500000,
     price_unit: 'unit',
     duration: '1.5 Jam',
-    main_image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800'
+    main_image: '/images/jeep3.jpg'
   },
   {
     id: 4,
@@ -186,7 +186,7 @@ export const fallbackPackages = [
     price: 550000,
     price_unit: 'unit',
     duration: '2 Jam',
-    main_image: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=800'
+    main_image: '/images/jeep4.jpg'
   },
   {
     id: 5,
@@ -203,7 +203,7 @@ export const fallbackPackages = [
     price: 550000,
     price_unit: 'unit',
     duration: '2 Jam',
-    main_image: 'https://images.unsplash.com/photo-1472214222555-d404758b1c42?w=800'
+    main_image: '/images/jeep5.jpg'
   },
   {
     id: 6,
@@ -220,7 +220,7 @@ export const fallbackPackages = [
     price: 550000,
     price_unit: 'unit',
     duration: '2 Jam',
-    main_image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800'
+    main_image: '/images/jeep6.png'
   },
   {
     id: 7,
@@ -238,7 +238,7 @@ export const fallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '3 Jam',
-    main_image: 'https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?w=800'
+    main_image: '/images/jeep7.jpg'
   },
   {
     id: 8,
@@ -254,7 +254,7 @@ export const fallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '3 Jam',
-    main_image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'
+    main_image: '/images/jeep8.jpg'
   },
   {
     id: 9,
@@ -299,7 +299,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/Borobudur.jpg'
   },
   {
     id: 11,
@@ -308,7 +308,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/jeep1.jpg'
   },
   {
     id: 12,
@@ -317,7 +317,7 @@ export const fallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/jeep2.jpg'
   },
   {
     id: 13,
@@ -326,7 +326,7 @@ export const fallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/tamansari.jpg'
   },
   {
     id: 14,
@@ -335,7 +335,7 @@ export const fallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/heha-sky.jpg'
   },
   {
     id: 15,
@@ -344,7 +344,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/obelix-hills.jpg'
   },
   {
     id: 16,
@@ -353,7 +353,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/benteng.jpg'
   },
   {
     id: 17,
@@ -362,7 +362,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/Pantai-Ngobaran.jpg'
   },
   {
     id: 18,
@@ -371,7 +371,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/goa-pindul.jpg'  
   },
   {
     id: 19,
@@ -380,7 +380,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/goa-pindul.jpg'
   },
   {
     id: 20,
@@ -389,7 +389,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/heha-sky.jpg'
   },
   {
     id: 21,
@@ -398,7 +398,7 @@ export const fallbackPackages = [
     price: 850000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/Borobudur.jpg'
   },
   {
     id: 22,
@@ -407,7 +407,7 @@ export const fallbackPackages = [
     price: 1100000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/dieng.jpg'
   },
   {
     id: 23,
@@ -416,7 +416,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/jeep3.jpg'
   },
   {
     id: 24,
@@ -425,7 +425,7 @@ export const fallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/tamansari.jpg'
   },
   {
     id: 25,
@@ -434,7 +434,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/pantai-sadranan.jpg'
   },
   {
     id: 26,
@@ -443,7 +443,7 @@ export const fallbackPackages = [
     price: 700000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/Borobudur.jpg'
   },
   {
     id: 27,
@@ -452,7 +452,7 @@ export const fallbackPackages = [
     price: 750000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/pulepayung.jpg'
   },
   {
     id: 28,
@@ -461,7 +461,7 @@ export const fallbackPackages = [
     price: 750000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/mangunan.jpg'
   },
   {
     id: 29,
@@ -470,7 +470,7 @@ export const fallbackPackages = [
     price: 750000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/pantaijungwok.png'
   },
   {
     id: 30,
@@ -479,7 +479,7 @@ export const fallbackPackages = [
     price: 750000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=800'
+    main_image: '/images/heha-sky.jpg'
   },
   {
     id: 31,
@@ -488,7 +488,7 @@ export const fallbackPackages = [
     price: 750000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'
+    main_image: '/images/jeep1.jpg'
   },
   {
     id: 32,
@@ -497,7 +497,7 @@ export const fallbackPackages = [
     price: 950000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'
+    main_image: '/images/jeep2.jpg'
   },
   {
     id: 33,
@@ -506,7 +506,7 @@ export const fallbackPackages = [
     price: 1400000,
     price_unit: 'unit',
     duration: '12 Jam',
-    main_image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'
+    main_image: '/images/jeep3.jpg'
   },
   {
     id: 34,
@@ -560,7 +560,7 @@ export const fallbackPackages = [
     price: 300000,
     price_unit: 'unit',
     duration: 'Sekali Jalan',
-    main_image: 'https://images.unsplash.com/photo-1436491865332-7a615061c443?w=800'
+    main_image: '/images/bandara-drop.png'
   },
   {
     id: 40,
@@ -569,7 +569,7 @@ export const fallbackPackages = [
     price: 350000,
     price_unit: 'unit',
     duration: 'Sekali Jalan',
-    main_image: 'https://images.unsplash.com/photo-1436491865332-7a615061c443?w=800'
+    main_image: '/images/bandara-pickup.png'
   },
   {
     id: 41,
@@ -701,7 +701,7 @@ export const fallbackDestinations = [
     description: 'Bunker Kaliadem adalah ruang bawah tanah yang dibangun khusus sebagai tempat perlindungan darurat dari awan panas letusan Gunung Merapi. Terletak di Sleman, tempat ini kini menjadi destinasi wisata favorit yang memadukan sejarah saksi bisu erupsi dahsyat dengan pemandangan langsung puncak Merapi yang berjarak sangat dekat.',
     location: 'Sleman, Yogyakarta',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1626082896492-766af4fc6595?w=800'
+    main_image: '/images/bunker-kaliadem.jpg'
   },
   {
     id: 2,
@@ -713,7 +713,7 @@ export const fallbackDestinations = [
     description: 'Penanjakan 1 adalah bukit tertinggi di kawasan Bromo Tengger Semeru yang menjadi lokasi paling legendaris untuk menyaksikan matahari terbit (sunrise). Dari sini, wisatawan dapat melihat panorama kawah Bromo berselimut kabut pagi bagaikan negeri di atas awan.',
     location: 'Pasuruan, Jawa Timur',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1588668214407-6797208c9012?w=800'
+    main_image: '/images/sunrise-bromo.jpg'
   },
   {
     id: 3,
@@ -725,7 +725,7 @@ export const fallbackDestinations = [
     description: 'Museum Sisa Hartaku adalah sebuah museum kecil milik warga lokal yang didirikan untuk memperingati erupsi Gunung Merapi tahun 2010. Di dalam museum ini dipajang berbagai sisa harta benda warga yang hancur dan meleleh akibat awan panas, mulai dari sepeda motor, peralatan dapur, hingga jam dinding yang berhenti tepat saat awan panas menerjang.',
     location: 'Sleman, Yogyakarta',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?w=800'
+    main_image: '/images/museum-merapi.jpg'
   },
   {
     id: 4,
@@ -737,7 +737,7 @@ export const fallbackDestinations = [
     description: 'Pura Luhur Poten adalah tempat ibadah suci bagi umat Hindu suku Tengger yang bertempat tinggal di sekitar Gunung Bromo. Pura ini memiliki arsitektur khas Jawa-Bali dan berdiri sangat unik di tengah hamparan pasir vulkanik (Lautan Pasir) Gunung Bromo.',
     location: 'Probolinggo, Jawa Timur',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=800'
+    main_image: '/images/pura-poten.jpg'
   },
   {
     id: 5,
@@ -749,7 +749,7 @@ export const fallbackDestinations = [
     description: 'Pasir Berbisik adalah sebutan untuk kawasan lautan pasir luas berwarna kehitaman yang membentang di sekitar kaldera Gunung Bromo. Dinamakan Pasir Berbisik karena ketika angin berembus kencang, gesekan butiran pasir mengeluarkan suara desisan lembut menyerupai bisikan.',
     location: 'Probolinggo, Jawa Timur',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=800'
+    main_image: '/images/pasir-berbisik.jpg'
   },
   {
     id: 6,
@@ -761,7 +761,7 @@ export const fallbackDestinations = [
     description: 'Padang Savana Bromo adalah sebuah lembah hijau subur berpagar dinding kaldera raksasa di sisi selatan Gunung Bromo. Di tengah savana ini terdapat deretan perbukitan meliuk hijau yang mirip dengan lokasi film anak-anak Teletubbies.',
     location: 'Malang, Jawa Timur',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'
+    main_image: '/images/savana-bromo.jpg'
   },
   {
     id: 7,
@@ -773,7 +773,7 @@ export const fallbackDestinations = [
     description: 'Jadah Tempe Mbah Carik adalah kuliner tradisional legendaris asal Kaliurang, Sleman yang sudah ada sejak tahun 1950-an. Kuliner ini merupakan perpaduan unik antara Jadah (ketan gurih) dan Tempe Bacem manis gurih yang dimakan secara bersamaan.',
     location: 'Sleman, Yogyakarta',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1605333396915-47ed6b68a00e?w=800'
+    main_image: '/images/jadah-tempe.jpg'
   },
   {
     id: 8,
@@ -785,7 +785,7 @@ export const fallbackDestinations = [
     description: 'Bakso Malang adalah kuliner ikonik khas Malang yang terkenal dengan kelengkapannya berupa bakso halus, siomay basah, tahu bakso, serta pangsit goreng renyah, disiram kuah kaldu sapi gurih yang cocok dinikmati di tengah hawa dingin Bromo.',
     location: 'Malang, Jawa Timur',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800'
+    main_image: '/images/bakso-malang.jpg'
   },
   {
     id: 9,
@@ -797,7 +797,7 @@ export const fallbackDestinations = [
     description: 'Pantai Sadranan adalah salah satu destinasi wisata bahari unggulan di Yogyakarta yang terkenal dengan pasir putih bersih dan air laut yang sangat jernih. Pantai ini dilindungi karang alami sehingga aman untuk aktivitas snorkeling.',
     location: 'Gunungkidul, Yogyakarta',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800'
+    main_image: '/images/pantai-sadranan.jpg'
   },
   {
     id: 10,
@@ -809,7 +809,7 @@ export const fallbackDestinations = [
     description: 'Pantai Balekambang adalah pantai eksotis di pesisir selatan Kabupaten Malang. Daya tarik utama pantai ini adalah keberadaan Pura Amarta Jati yang berdiri megah di atas Pulau Ismoyo karang di tengah pantai.',
     location: 'Malang, Jawa Timur',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800'
+    main_image: '/images/pantai-balekambang.jpg'
   },
   {
     id: 11,
@@ -821,7 +821,7 @@ export const fallbackDestinations = [
     description: 'Candi Borobudur adalah monumen Buddha terbesar di dunia yang dibangun pada masa Dinasti Syailendra. Dikenal dengan relief dinding yang rumit dan stupa-stupa berlubang yang berisi arca Buddha, Borobudur merupakan keajaiban arsitektur kuno dan destinasi wajib saat berkunjung ke wilayah Jogja dan sekitarnya.',
     location: 'Magelang, Jawa Tengah',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1596402184320-417e7178b2cb?w=800'
+    main_image: '/images/Borobudur.jpg'
   },
   {
     id: 12,
@@ -833,7 +833,7 @@ export const fallbackDestinations = [
     description: 'Candi Prambanan adalah mahakarya kebudayaan Hindu dari abad ke-10 yang didedikasikan untuk Trimurti (Dewa Brahma, Wisnu, dan Siwa). Candi utamanya yang ramping dan menjulang setinggi 47 meter menjadi daya tarik visual yang luar biasa, terutama saat senja tiba.',
     location: 'Sleman, Yogyakarta',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=800'
+    main_image: '/images/prambanan.jpg'
   },
   {
     id: 13,
@@ -845,7 +845,7 @@ export const fallbackDestinations = [
     description: 'Goa Pindul menawarkan pengalaman unik berupa "Cave Tubing", di mana wisatawan akan menyusuri aliran sungai bawah tanah di dalam gua menggunakan ban pelampung. Sambil mengapung santai, Anda dapat menikmati keindahan ornamen stalaktit dan stalagmit yang terbentuk secara alami ribuan tahun.',
     location: 'Gunungkidul, Yogyakarta',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800'
+    main_image: '/images/goa-pindul.jpg'
   },
   {
     id: 14,
@@ -857,7 +857,7 @@ export const fallbackDestinations = [
     description: 'Heha Sky View adalah destinasi wisata modern kekinian di perbukitan Gunungkidul. Tempat ini sangat populer berkat spot-spot foto instagenik berlatar belakang hamparan kota Yogyakarta dari ketinggian. Waktu terbaik berkunjung adalah sore hari untuk menikmati pemandangan matahari terbenam dan gemerlap lampu kota di malam hari.',
     location: 'Gunungkidul, Yogyakarta',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1629853903100-8d5ec42c0c0f?w=800'
+    main_image: '/images/heha-sky.jpg'
   },
   {
     id: 15,
@@ -869,7 +869,7 @@ export const fallbackDestinations = [
     description: 'Pantai Timang bukan sekadar pantai biasa. Daya tarik utamanya adalah sebuah pulau karang (Pulau Timang) yang dihubungkan ke tebing daratan oleh kereta gantung kayu tradisional (gondola) dan jembatan gantung yang mendebarkan. Pantai ini sangat cocok untuk Anda yang menyukai tantangan dan adrenalin.',
     location: 'Gunungkidul, Yogyakarta',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1582298642055-6b5894b9ff52?w=800'
+    main_image: '/images/pantai-timang.jpg'
   },
   {
     id: 16,
@@ -881,7 +881,7 @@ export const fallbackDestinations = [
     description: 'Jalan Malioboro adalah ikon tak terpisahkan dari Yogyakarta. Kawasan pedestrian ini selalu ramai oleh wisatawan yang berburu batik, kerajinan tangan, dan suvenir khas Jogja. Di malam hari, Malioboro bertransformasi menjadi pusat kuliner angkringan dan musisi jalanan yang menghidupkan suasana magis kota pelajar ini.',
     location: 'Kota Yogyakarta',
     featured: true,
-    main_image: 'https://images.unsplash.com/photo-1610013575918-a6dff5aeb665?w=800'
+    main_image: '/images/malioboro.jpg'
   },
   {
     id: 17,
@@ -893,8 +893,8 @@ export const fallbackDestinations = [
     description: 'Berada di atas bebatuan purba yang luas, Obelix Hills menawarkan tempat bersantai yang luar biasa estetik dengan pemandangan lembah hijau dan matahari terbenam yang sempurna. Tempat ini dilengkapi puluhan spot foto keren, bean bag untuk bersantai, dan live music yang menghangatkan suasana.',
     location: 'Sleman, Yogyakarta',
     featured: false,
-    main_image: 'https://images.unsplash.com/photo-1596402447953-270f2095cc60?w=800'
-  }
+    main_image: '/images/obelix-hills.jpg'
+  },
 ];
 
 export const fallbackTestimonials = [
@@ -921,8 +921,7 @@ export const fallbackEvents = [
     id: 1,
     title: 'Bali Arts Festival (Pesta Kesenian Bali) 2026',
     slug: 'bali-arts-festival-2026',
-    description: 'Parade budaya tahunan terbesar di Bali yang menampilkan tari-tarian kolosal, pameran kerajinan tangan khas kabupaten/kota se-Bali, pertunjukan gamelan gong kebyar, serta sendratari Ramayana di panggung Terbuka Ardha Candra.',
-    main_image: 'event_bali_arts.jpg',
+    main_image: '/images/pantai-balekambang.jpg',
     date: '2026-07-05T00:00:00.000Z',
     location: 'Taman Budaya Art Center, Denpasar'
   },
@@ -930,8 +929,7 @@ export const fallbackEvents = [
     id: 2,
     title: 'Borobudur Marathon & Festival Kebudayaan 2026',
     slug: 'borobudur-marathon-2026',
-    description: 'Event lari maraton berskala internasional yang melintasi pedesaan asri di sekitar kawasan Candi Borobudur, diselingi pertunjukan tari tradisional khas Magelang di sepanjang rute pelari.',
-    main_image: 'event_borobudur_run.jpg',
+    main_image: '/images/Borobudur.jpg',
     date: '2026-06-10T00:00:00.000Z',
     location: 'Kawasan Candi Borobudur, Magelang'
   }
@@ -944,10 +942,10 @@ export const fallbackArticles = [
     slug: 'panduan-berburu-sunrise-magis-gunung-bromo',
     excerpt: 'Rekomendasi spot sunrise terbaik di Bromo, tips berpakaian hangat, hingga panduan sewa Jeep 4x4.',
     description: 'Gunung Bromo selalu menyajikan pemandangan sunrise yang luar biasa megah dan menarik ribuan wisatawan setiap tahunnya. Petualangan berburu sunrise biasanya dimulai sejak dini hari pukul 02.00 WIB. Pilihan transportasi utama adalah Jeep 4x4 yang tangguh menerjang lautan pasir berliku. Ada beberapa spot pandang terbaik yang bisa Anda pilih, seperti Penanjakan 1, Bukit Cinta, Bukit Kedaluh (King Kong Hill), atau Bukit Mentigen. Untuk menikmati petualangan ini dengan maksimal, pastikan Anda mempersiapkan pakaian hangat yang tebal seperti jaket gunung, kupluk penutup kepala, sarung tangan, dan masker pelindung debu pasir.',
-    main_image: 'https://images.unsplash.com/photo-1588668214407-6797208c9012?w=800',
+    main_image: '/images/sunrise-bromo.jpg',
     images: [
-      { id: 1, image_name: 'https://images.unsplash.com/photo-1602148740250-0a4750e232e9?w=800' },
-      { id: 2, image_name: 'https://images.unsplash.com/photo-1601918774946-25832a4be0d6?w=800' }
+      { id: 1, image_name: '/images/Bromo.jpg' },
+      { id: 2, image_name: '/images/savana-bromo.jpg' }
     ]
   },
   {
@@ -956,10 +954,10 @@ export const fallbackArticles = [
     slug: 'menyusuri-jejak-sejarah-adrenalin-lavatour-merapi',
     excerpt: 'Kisah saksi bisu erupsi besar Merapi yang kini menjelma menjadi rute petualangan jeep offroad menantang.',
     description: 'Lavatour Merapi menawarkan kombinasi unik antara wisata sejarah mitigasi bencana dan petualangan memacu adrenalin. Mengendarai Jeep Willys klasik tanpa atap, Anda akan diajak menyusuri kawasan lereng selatan yang terdampak langsung erupsi dahsyat tahun 2010. Perjalanan mencakup kunjungan ke Bunker Kaliadem, Museum Sisa Hartaku yang mengoleksi barang rumah tangga meleleh, serta Batu Alien. Petualangan ditutup dengan manuver air yang menegangkan di Kali Kuning. Siapkan kacamata hitam dan masker agar terhindar dari debu trek pasir vulkanik.',
-    main_image: 'https://images.unsplash.com/photo-1626082896492-766af4fc6595?w=800',
+    main_image: '/images/Merapi.jpg',
     images: [
-      { id: 3, image_name: 'https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?w=800' },
-      { id: 4, image_name: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800' }
+      { id: 3, image_name: '/images/bunker-kaliadem.jpg' },
+      { id: 4, image_name: '/images/museum-merapi.jpg' }
     ]
   }
 ];

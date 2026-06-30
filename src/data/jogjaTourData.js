@@ -145,7 +145,7 @@ export const merapiFallbackPackages = [
     price: 450000,
     price_unit: 'unit',
     duration: '1.5 Jam',
-    main_image: 'https://images.unsplash.com/photo-1626082896492-766af4fc6595?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-2',
@@ -161,7 +161,7 @@ export const merapiFallbackPackages = [
     price: 500000,
     price_unit: 'unit',
     duration: '1.5 Jam',
-    main_image: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-3',
@@ -177,7 +177,7 @@ export const merapiFallbackPackages = [
     price: 500000,
     price_unit: 'unit',
     duration: '1.5 Jam',
-    main_image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-4',
@@ -194,7 +194,7 @@ export const merapiFallbackPackages = [
     price: 550000,
     price_unit: 'unit',
     duration: '2 Jam',
-    main_image: 'https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-5',
@@ -211,7 +211,7 @@ export const merapiFallbackPackages = [
     price: 550000,
     price_unit: 'unit',
     duration: '2 Jam',
-    main_image: 'https://images.unsplash.com/photo-1472214222555-d404758b1c42?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-6',
@@ -228,7 +228,7 @@ export const merapiFallbackPackages = [
     price: 550000,
     price_unit: 'unit',
     duration: '2 Jam',
-    main_image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-7',
@@ -246,7 +246,7 @@ export const merapiFallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '3 Jam',
-    main_image: 'https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?w=800'
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
   },
   {
     id: 'fallback-merapi-8',
@@ -262,8 +262,8 @@ export const merapiFallbackPackages = [
     price: 650000,
     price_unit: 'unit',
     duration: '3 Jam',
-    main_image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800'
-  }
+    main_image: '/images/pexels-kevin-yung-2152346613-37805300.jpg'
+  },
 ];
 
 export const bromoFallbackPackages = [

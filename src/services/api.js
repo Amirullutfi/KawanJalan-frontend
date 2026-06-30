@@ -182,8 +182,11 @@ export const getMediaUrl = (path) => {
   if (!path) return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800';
   if (path.startsWith('http')) return path;
   
-  // Return dummy unsplash if path is just a filename
-  return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800'; 
+  // Return local path directly if it starts with /
+  if (path.startsWith('/')) return path;
+
+  // Otherwise assume it's an uploaded file in backend storage
+  return `http://localhost:8000/storage/${path}`;
 };
 
 export const fetchWithCache = async (url, fallbackData = null) => {

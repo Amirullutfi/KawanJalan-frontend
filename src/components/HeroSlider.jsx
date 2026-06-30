@@ -3,27 +3,28 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/Bromo.jpg', 
     title: 'Eksotisme Gunung Bromo',
     tagline: 'Nikmati keindahan sunrise magis di atas lautan pasir vulkanik Jawa Timur.',
     cta: 'Lihat Destinasi',
     link: '/destinations'
   },
   {
-    image: 'https://images.unsplash.com/photo-1626082896492-766af4fc6595?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/Merapi.jpg', 
     title: 'Pesona Lereng Gunung Merapi',
     tagline: 'Uji adrenalin Anda dengan petualangan jeep offroad menyusuri sisa erupsi bersejarah.',
     cta: 'Pilih Paket Tour',
     link: '/packages'
   },
   {
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
-    title: 'Keindahan Pantai Parangtritis',
-    tagline: 'Saksikan sunset romantis berlatar belakang tebing karang dan hamparan gumuk pasir legendaris.',
+    image: '/images/Borobudur.jpg', 
+    title: 'Kemegahan Candi Borobudur',
+    tagline: 'Jelajahi keajaiban arsitektur kuno dan rasakan kedamaian spiritual di candi Buddha terbesar di dunia.',
     cta: 'Jelajahi Sekarang',
     link: '/destinations'
   }
 ];
+
 
 const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
