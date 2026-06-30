@@ -29,7 +29,8 @@ const mockApi = {
       const idMatch = url.match(/\/bookings\/(\w+)/);
       if (idMatch) {
          const booking = bookings.find(b => b.id == idMatch[1] || b.booking_code === idMatch[1]);
-         return { data: booking };
+         if (!booking) throw new Error('Booking not found');
+         return { data: { booking, seconds_remaining: 3600 } };
       }
       return { data: bookings };
     }
