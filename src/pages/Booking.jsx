@@ -261,56 +261,60 @@ const Booking = () => {
               </div>
             </div>
 
-            {/* Pilihan Dokumentasi Foto */}
-            <div className="form-group" style={{ marginTop: '12px' }}>
-              <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Camera size={18} style={{ color: 'var(--primary)' }} /> Tambah Jasa Dokumentasi Foto
-              </label>
-              <select
-                className="form-input"
-                value={photoPackageName}
-                onChange={(e) => setPhotoPackageName(e.target.value)}
-                style={{ cursor: 'pointer' }}
-              >
-                <option value="">Tanpa Jasa Foto</option>
-                <option value="MINI">Paket MINI (1 Rute + Video Air) - Rp 400.000</option>
-                <option value="SHORT">Paket SHORT (2 Rute + Video Air) - Rp 450.000</option>
-                <option value="MEDIUM">Paket MEDIUM (3 Rute + Video Air) - Rp 500.000</option>
-                <option value="LONG">Paket LONG (4 Rute + Video Air) - Rp 600.000</option>
-                <option value="SUKA SUKA">Paket SUKA SUKA (Custom / Fleksibel) - Rp 800.000</option>
-              </select>
-            </div>
-
-            {/* Pilihan Drone */}
-            <div className="form-group" style={{
-              backgroundColor: '#f8fafc',
-              padding: '16px',
-              borderRadius: '10px',
-              border: '1px solid #e2e8f0',
-              marginTop: '16px'
-            }}>
-              <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '12px', userSelect: 'none' }}>
-                <input
-                  type="checkbox"
-                  checked={addonDrone}
-                  onChange={(e) => setAddonDrone(e.target.checked)}
-                  style={{
-                    width: '20px',
-                    height: '20px',
-                    cursor: 'pointer',
-                    accentColor: 'var(--primary)'
-                  }}
-                />
-                <div>
-                  <span style={{ fontWeight: 600, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Video size={16} style={{ color: 'var(--secondary)' }} /> Tambah Drone Service (+Rp 500.000)
-                  </span>
-                  <span style={{ display: 'block', fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                    Sudah termasuk Video udara + Pilot Berlisensi.
-                  </span>
+            {(pack?.title?.toLowerCase().includes('merapi') || packageId === '6') && (
+              <>
+                {/* Pilihan Dokumentasi Foto */}
+                <div className="form-group" style={{ marginTop: '12px' }}>
+                  <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <Camera size={18} style={{ color: 'var(--primary)' }} /> Tambah Jasa Dokumentasi Foto
+                  </label>
+                  <select
+                    className="form-input"
+                    value={photoPackageName}
+                    onChange={(e) => setPhotoPackageName(e.target.value)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <option value="">Tanpa Jasa Foto</option>
+                    <option value="MINI">Paket MINI (1 Rute + Video Air) - Rp 400.000</option>
+                    <option value="SHORT">Paket SHORT (2 Rute + Video Air) - Rp 450.000</option>
+                    <option value="MEDIUM">Paket MEDIUM (3 Rute + Video Air) - Rp 500.000</option>
+                    <option value="LONG">Paket LONG (4 Rute + Video Air) - Rp 600.000</option>
+                    <option value="SUKA SUKA">Paket SUKA SUKA (Custom / Fleksibel) - Rp 800.000</option>
+                  </select>
                 </div>
-              </label>
-            </div>
+
+                {/* Pilihan Drone */}
+                <div className="form-group" style={{
+                  backgroundColor: '#f8fafc',
+                  padding: '16px',
+                  borderRadius: '10px',
+                  border: '1px solid #e2e8f0',
+                  marginTop: '16px'
+                }}>
+                  <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: '12px', userSelect: 'none' }}>
+                    <input
+                      type="checkbox"
+                      checked={addonDrone}
+                      onChange={(e) => setAddonDrone(e.target.checked)}
+                      style={{
+                        width: '20px',
+                        height: '20px',
+                        cursor: 'pointer',
+                        accentColor: 'var(--primary)'
+                      }}
+                    />
+                    <div>
+                      <span style={{ fontWeight: 600, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <Video size={16} style={{ color: 'var(--secondary)' }} /> Tambah Drone Service (+Rp 500.000)
+                      </span>
+                      <span style={{ display: 'block', fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '2px' }}>
+                        Sudah termasuk Video udara + Pilot Berlisensi.
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </>
+            )}
 
             <button
               type="submit"
