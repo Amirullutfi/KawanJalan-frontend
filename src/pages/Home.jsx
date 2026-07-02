@@ -269,7 +269,7 @@ const Home = () => {
                     <div style={{ padding: '24px' }}>
                       <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: 'var(--dark)' }}>{pkg.title}</h3>
                       <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '16px' }}>
-                        {pkg.description ? pkg.description.slice(0, 110) + '...' : ''}
+                        {pkg.description ? stripHtml(pkg.description).slice(0, 110) + '...' : ''}
                       </p>
                       <div style={{ display: 'flex', gap: '16px', fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
@@ -397,6 +397,11 @@ const Home = () => {
 // Helper function
 const numberFormat = (x) => {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
+
+const stripHtml = (htmlString) => {
+  if (!htmlString) return '';
+  return htmlString.replace(/<[^>]*>?/gm, '');
 };
 
 export default Home;

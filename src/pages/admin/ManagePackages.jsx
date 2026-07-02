@@ -349,7 +349,7 @@ const ManagePackages = () => {
                   <div style={{ padding: '20px' }}>
                     <h3 style={{ fontSize: '1.15rem', color: 'var(--dark)', marginBottom: '8px' }}>{pkg.title}</h3>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '16px' }}>
-                      {pkg.description ? pkg.description.slice(0, 100) + '...' : ''}
+                      {pkg.description ? stripHtml(pkg.description).slice(0, 100) + '...' : ''}
                     </p>
                     <div style={{ display: 'flex', gap: '16px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                       <span>Durasi: <strong>{pkg.duration}</strong></span>
@@ -388,6 +388,12 @@ const ManagePackages = () => {
       )}
     </div>
   );
+};
+
+// Helper function
+const stripHtml = (htmlString) => {
+  if (!htmlString) return '';
+  return htmlString.replace(/<[^>]*>?/gm, '');
 };
 
 export default ManagePackages;
