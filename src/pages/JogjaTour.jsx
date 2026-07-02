@@ -899,14 +899,24 @@ const JogjaTour = () => {
                   Rp {numberFormat(selectedPackage.price)}
                 </p>
               </div>
-              <Link 
-                to={`/booking/${selectedPackage.id}`}
-                onClick={() => setSelectedPackage(null)}
-                className="btn btn-primary"
-                style={{ padding: '12px 24px', borderRadius: '12px', fontSize: '1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}
-              >
-                Pesan Sekarang
-              </Link>
+              {selectedPackage.title.toLowerCase().includes('bromo') ? (
+                <button 
+                  className="btn btn-secondary"
+                  style={{ padding: '12px 24px', borderRadius: '12px', fontSize: '1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'not-allowed', opacity: 0.7 }}
+                  disabled
+                >
+                  Belum Tersedia
+                </button>
+              ) : (
+                <Link 
+                  to={`/booking/${selectedPackage.id}`}
+                  onClick={() => setSelectedPackage(null)}
+                  className="btn btn-primary"
+                  style={{ padding: '12px 24px', borderRadius: '12px', fontSize: '1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}
+                >
+                  Pesan Sekarang
+                </Link>
+              )}
             </div>
           </div>
         </div>

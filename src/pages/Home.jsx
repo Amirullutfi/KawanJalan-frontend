@@ -294,9 +294,15 @@ const Home = () => {
                         Rp {numberFormat(pkg.price)} <span style={{ fontSize: '0.8rem', fontWeight: 'normal', color: 'var(--text-muted)' }}>/{pkg.price_unit}</span>
                       </p>
                     </div>
-                    <Link to={`/booking/${pkg.id}`} className="btn btn-primary" style={{ padding: '8px 16px', borderRadius: '6px', fontSize: '0.85rem' }}>
-                      Booking
-                    </Link>
+                    {pkg.title.toLowerCase().includes('bromo') ? (
+                      <button className="btn btn-secondary" style={{ padding: '8px 16px', borderRadius: '6px', fontSize: '0.85rem', cursor: 'not-allowed', opacity: 0.7 }} disabled>
+                        Belum Tersedia
+                      </button>
+                    ) : (
+                      <Link to={`/booking/${pkg.id}`} className="btn btn-primary" style={{ padding: '8px 16px', borderRadius: '6px', fontSize: '0.85rem' }}>
+                        Booking
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}

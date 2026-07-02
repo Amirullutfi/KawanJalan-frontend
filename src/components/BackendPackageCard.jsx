@@ -150,13 +150,19 @@ const BackendPackageCard = ({ pkg, onClick }) => {
           >
             Rincian
           </button>
-          <Link 
-            to={`/booking/${pkg.id}`} 
-            className="btn btn-primary" 
-            style={{ padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem' }}
-          >
-            Booking
-          </Link>
+          {pkg.title.toLowerCase().includes('bromo') ? (
+            <button className="btn btn-secondary" style={{ padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem', cursor: 'not-allowed', opacity: 0.7 }} disabled>
+              Belum Tersedia
+            </button>
+          ) : (
+            <Link 
+              to={`/booking/${pkg.id}`} 
+              className="btn btn-primary" 
+              style={{ padding: '8px 14px', borderRadius: '8px', fontSize: '0.85rem' }}
+            >
+              Booking
+            </Link>
+          )}
         </div>
       </div>
     </div>
