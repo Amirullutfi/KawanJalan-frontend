@@ -92,6 +92,14 @@ const mockApi = {
     }
     
     if (url === '/bookings') {
+       // [KONEKSI BACKEND] Mengirim data ke server Laravel secara background agar pesan WA terkirim
+       fetch('http://localhost:8000/api/bookings', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+           body: JSON.stringify(data)
+       }).then(res => console.log('Backend notification sent:', res.status))
+         .catch(err => console.error('Gagal mengirim notifikasi ke backend:', err));
+
        const bookings = getLocalDB('mock_bookings', []);
        const packageData = fallbackPackages.find(p => p.id == data.package_id);
        let basePrice = packageData ? (packageData.price_unit === 'orang' ? packageData.price * data.num_people : packageData.price) : 0;
